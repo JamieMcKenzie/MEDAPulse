@@ -169,8 +169,8 @@ DEPENDENCIES
   better_errors
   coffee-rails (~> 4.0.0)
   cool_faker
-  dotenv-rails
   devise
+  dotenv-rails
   factory_girl_rails
   faker
   jbuilder (~> 2.0)
