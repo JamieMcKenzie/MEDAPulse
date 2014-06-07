@@ -11,13 +11,6 @@ Rails.application.routes.draw do
 
   resources :goals
 
-  devise_for :users
-  get 'welcome/index'
-
-  get 'welcome/about'
-
-  root :to => 'welcome#index'
-
   resources :clients
 
   # The priority is based upon order of creation: first created -> highest priority.

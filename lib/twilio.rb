@@ -12,7 +12,7 @@ module Twilio
         from: FROM_NUM,
         body: message
       }
-      message = client.account.messages.create(message_details)
+      p message = client.account.messages.create(message_details)
     rescue Twilio::REST::RequestError => e
       self.handle_error(e.message)
     end
