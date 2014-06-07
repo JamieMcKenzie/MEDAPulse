@@ -1,0 +1,27 @@
+<h2>Sign in</h2>
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-horizontal'}) do |f| %>
+  <%= devise_error_messages! %>
+  <div class="control-group">
+    <%= f.label :email, class: 'control-label' %>
+    <div class="controls">
+      <%= f.email_field :email, :autofocus => true %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :password, class: 'control-label' %>
+    <div class="controls">
+      <%= f.password_field :password %>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <%= f.submit "Sign in", class: 'btn' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+<% end %>
