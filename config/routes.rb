@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
+
   resources :steps
 
   resources :goals
+
+  devise_for :users
+  get 'welcome/index'
+
+  get 'welcome/about'
+
+  root :to => 'welcome#index'
 
   resources :clients
 
