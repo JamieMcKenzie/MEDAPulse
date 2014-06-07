@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-<<<<<<< HEAD
-=======
   devise_for :users
   get 'welcome/index'
 
@@ -9,7 +7,6 @@ Rails.application.routes.draw do
 
   root :to => 'welcome#index'
 
->>>>>>> bd17100b510af6cf715eaf7b71816077cdf20e5a
   resources :steps
 
   resources :goals
