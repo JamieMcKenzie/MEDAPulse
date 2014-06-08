@@ -26,6 +26,7 @@ a {
 	text-decoration: none;
 }
 
+
 a.shading:hover {
 	background-color: rgba(224, 224, 224, 0.6);
 }
