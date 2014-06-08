@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <%= @client.name %>
+
   <div class="field">
     <%= f.label :content %><br>
     <%= f.text_field :content %>
@@ -24,9 +26,9 @@
     <%= f.number_field :num_value %>
   </div>
   <div class="field">
-    <%= f.label :client_id %><br>
-    <%= f.text_field :client_id %>
+    <%= hidden_field_tag :client_id, @client.id %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -14,6 +14,7 @@ class GoalsController < ApplicationController
 
   # GET /goals/new
   def new
+    @client = Client.find(params[:client_id])
     @goal = Goal.new
   end
 
@@ -25,6 +26,7 @@ class GoalsController < ApplicationController
   # POST /goals.json
   def create
     @goal = Goal.new(goal_params)
+    @goal.client_id = params[:client_id]
 
     respond_to do |format|
       if @goal.save

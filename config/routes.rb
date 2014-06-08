@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   root :to => 'welcome#index'
   devise_for :users, :controllers => { :registrations => "registrations" }
   resources :steps
+
+  get '/clients/:client_id/goals/new', :to => 'goals#new'
+
+
   resources :goals
   resources :clients
 
