@@ -92,8 +92,10 @@ input {
 	display: none;
 }
 
-.dashboard {
+.dashboard ul{
   border: 1px solid black;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .column li{
@@ -101,7 +103,10 @@ input {
   display: block;
   margin: 0 auto;
   padding: 0;
-  width: 100%;
+  width: 30%;
+}
+.column li img {
+  margin: 0 auto;
 }
 
 .snap {
