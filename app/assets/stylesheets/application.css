@@ -86,3 +86,7 @@ li.nav {
 input {
   margin: 10 0;
 }
+
+#new_step {
+	display: none;
+}
