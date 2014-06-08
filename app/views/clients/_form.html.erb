@@ -1,4 +1,4 @@
-<%= form_for(@client) do |f| %>
+<%= form_for(@client, :html => {:class => 'pure-form pure-form-stacked'}) do |f| %>
   <% if @client.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@client.errors.count, "error") %> prohibited this client from being saved:</h2>
@@ -12,21 +12,21 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :phone %><br>
+    <%= f.label :phone %>
     <%= f.text_field :phone %>
   </div>
   <div class="field">
-    <%= f.label :salesforce_id %><br>
+    <%= f.label :salesforce_id %>
     <%= f.text_field :salesforce_id %>
   </div>
   <% if @user %>
     <%= hidden_field_tag :user_id, @user.id %>
   <% end %>
-  <div class="actions">
-    <%= f.submit %>
+  <div >
+    <%= f.submit "Submit",:class => 'actions pure-button pure-button-primary' %>
   </div>
 <% end %>

@@ -10,13 +10,13 @@
     <%= csrf_meta_tags %>
   </head>
   <header>
-    <div id = "navi">
+    <div>
         <ul class ="home">
-            <li><%= link_to "Home", root_path %></li>
-            <li><%= link_to "About", welcome_about_path %></li>
+            <li class = "nav"><%= link_to "Home", root_path %></li>
+            <li class = "nav"><%= link_to "About", welcome_about_path %></li>
         </ul>
       </div>
-    <div id = "navi">
+    <div>
       <%= link_to image_tag("medaPulse-header.png", alt: "logo", class: "logo"), root_path %>
     </div>
   </header>
@@ -25,12 +25,13 @@
   <div class = "center">
 
     <% if current_user %>
-         <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-       <% else %>
-         <%= link_to "Sign In", new_user_session_path %> or
-         <%= link_to "Sign Up", new_user_registration_path %>
-       <% end %>
-     </div>
+      Hello <%= current_user.email %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Sign In", new_user_session_path %> or
+      <%= link_to "Sign Up", new_user_registration_path %>
+    <% end %>
+
+  </div>
 
 </body>
 </html>
