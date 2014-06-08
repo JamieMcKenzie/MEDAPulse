@@ -119,3 +119,21 @@ input {
 .results-two {
 
 }
+
+.signout{
+  font-family: "Roboto", "Helvetica", "Verdana", sans-serif;
+  float: right;
+  font-size: 14px;
+  margin: 12px auto;
+  text-align: center;
+  width: 100%;
+}
+
+.signout a{
+  background-color: #232323;
+  border: 1px solid black;
+  color: white;
+  font-size: 14px;
+  font-family: "Roboto", "Helvetica", "Verdana", sans-serif;
+  padding: 2px;
+}
