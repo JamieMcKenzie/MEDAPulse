@@ -93,19 +93,18 @@ input {
 }
 
 .dashboard ul{
-  border: 1px solid black;
   margin: 0 auto;
   width: 100%;
 }
 
 .column li{
-  border: 1px solid black;
   display: block;
   margin: 0 auto;
   padding: 0;
   width: 30%;
 }
 .column li img {
+  border: 1px solid black;
   margin: 0 auto;
 }
 
