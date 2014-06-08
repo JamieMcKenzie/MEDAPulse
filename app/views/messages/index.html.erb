@@ -1,0 +1,36 @@
+<h1>Listing messages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>Status</th>
+      <th>Scheduled</th>
+      <th>Send Attempted</th>
+      <th>Send Successful</th>
+      <th>Goal</th>
+      <th>Client</th>
+      <th colspan="6"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @messages.each do |message| %>
+      <tr>
+        <td><%= message.content %></td>
+        <td><%= message.status %></td>
+        <td><%= message.by_when %></td>
+        <td><%= message.send_attempted %></td>
+        <td><%= message.send_successful %></td>
+        <td><%= link_to 'Show', message %></td>
+        <td><%= link_to 'Edit', edit_message_path(message) %></td>
+        <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<%= link_to "New Message", "/steps/#{@step.id}/messages/new" %>
