@@ -31,4 +31,18 @@
 
 
 <%= link_to "New Step", "/#",   :id => 'new-step-link' %> 
-<%= render partial: 'steps/form', locals: {step: @step, goal: @goal}, :id => 'new-step-form'%>
+<%= render partial: 'steps/form', locals: {step: @step, goal: @goal} %>
+
+<script type="text/javascript">
+    $('#new_step').hide();
+    $('#new-step-link').click(function(e) {
+      e.preventDefault();
+      $('#new_step').toggle();
+      return false;
+    });
+    $('#new_step').bind('ajax:success', function(e, response) {
+      $("#steps-list").append('<li>'+response+'</li>');
+      $("#new_step").hide();
+      $("#new_step")[0].reset();
+    });
+</script>
