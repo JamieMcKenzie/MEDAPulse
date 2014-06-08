@@ -90,3 +90,27 @@ input {
 #new_step {
 	display: none;
 }
+
+.dashboard {
+  border: 1px solid black;
+}
+
+.column li{
+  border: 1px solid black;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+.snap {
+
+}
+
+.results-one {
+
+}
+
+.results-two {
+
+}

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'welcome/about'
+  get 'welcome/dashboard'
   root :to => 'welcome#index'
 
   get '/users/:user_id/clients/new', :to => 'clients#new'
