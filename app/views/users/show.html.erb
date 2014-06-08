@@ -7,15 +7,14 @@
   Welcome, coach!
 </h1>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
-
 <div id="client-list">
   <div class="list-tools">
     <h1>Current Clients:</h1>
     <div class="tools">
-      <input class="search" placeholder="Search" /><br>
-      <button class="sort" data-sort="name">
+      <form class ="pure-form">
+      <input class="search pure-input" placeholder="Search" /><br>
+      <button class="sort pure-button" data-sort="name">
+      </form>
         Sort by name
       </button>
     </div>
@@ -27,6 +26,6 @@
       </ul>
     <% end %>
   </ul>
+<%= link_to 'Edit Profile', edit_user_path(@user) %>
 </div>
-<%= link_to 'New Client', "/users/#{@user.id}/clients/new" %>
 
