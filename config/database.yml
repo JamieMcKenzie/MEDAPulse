@@ -1,17 +1,20 @@
 development:
   adapter: postgresql
   database: medapulse_dev
+  host: 127.0.0.1
   pool: 5
   timeout: 5000
 
 test:
   adapter: postgresql
   database: medapulse_test
+  host: 127.0.0.1
   pool: 5
   timeout: 5000
 
 production:
   adapter: postgresql
   database: medapulse
+  host: 127.0.0.1
   pool: 5
   timeout: 5000

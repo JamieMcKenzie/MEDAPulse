@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Medapulse</title>
-    <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
+  <head>
+    <title>Medapulse</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/buttons-min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/tables-min.css">
+      <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <header>
+    <div id = "navi">
+        <ul class ="home">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "About", welcome_about_path %></li>
+        </ul>
+      </div>
+    <div id = "navi">
+      <%= link_to image_tag("medaPulse-header.png", alt: "logo", class: "logo"), root_path %>
+    </div>
+  </header>
 <body>
-
-  <ul>
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "About", welcome_about_path %></li>
-  </ul>
-  <div class="pull-right user-info">
+  <%= yield %>
+  <div class = "center">
 
     <% if current_user %>
       Hello <%= current_user.email %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
     <% else %>
-      <%= link_to "Sign In", new_user_session_path %> or
-      <%= link_to "Sign Up", new_user_registration_path %>
+    <button class="pure-button pure-button-primary white"><%= link_to "Sign Up Today", new_user_registration_path %></button>
+    <button class="pure-button white">
+      <%= link_to "Sign In", new_user_session_path %>
+    </button>
     <% end %>
   </div>
-
-<%= yield %>
 
 </body>
 </html>
