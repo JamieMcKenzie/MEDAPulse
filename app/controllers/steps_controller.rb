@@ -32,6 +32,7 @@ class StepsController < ApplicationController
     respond_to do |format|
       if @step.save
         format.html { redirect_to @step, notice: 'Step was successfully created.' }
+        format.partial { render partial:"shared/goal_step_list_item", :formats => ['html'], locals: {step: @step}}
         format.json { render :show, status: :created, location: @step }
       else
         format.html { render :new }
