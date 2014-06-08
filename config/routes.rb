@@ -8,13 +8,13 @@ Rails.application.routes.draw do
   resources :users
 
   devise_for :users, :controllers => { :registrations => "registrations" }
-  resources :steps
 
   get '/clients/:client_id/goals/new', :to => 'goals#new'
+  get '/goals/:goal_id/steps/new', :to => 'steps#new'
 
-  resources :goals
   resources :clients
-
+  resources :goals
+  resources :steps
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
