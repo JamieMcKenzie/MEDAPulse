@@ -47,7 +47,6 @@ clients.each do |client|
   end
 end
 college = Goal.create({ content: "Save $2000 for college.", category: "Savings", client: joe })
-goals << college
 
 steps = []
 goals.each do |goal|
@@ -57,15 +56,10 @@ goals.each do |goal|
 end
 step_one = Step.create({ content: "Open a bank account.", status: "active", by_when: Date.today, goal: college })
 step_two = Step.create({ content: "Save $500 in July.", status: "queued", by_when: Date.today+(40), goal: college })
-steps << step_one
-steps << step_two
 
 steps.each do |step|
   2.times do
     Message.create({content: CoolFaker::Team.name, date: getDate, send_attempted: false, send_successful: false, step:step, client_id: step.goal.client_id})
   end
 end
-
-
-
 
