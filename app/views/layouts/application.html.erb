@@ -14,6 +14,7 @@
         <ul class ="home">
             <li class = "nav"><%= link_to "Home", root_path %></li>
             <li class = "nav"><%= link_to "About", welcome_about_path %></li>
+            <li class = "nav"><%= link_to "Dashboard", welcome_dashboard_path %></li>
         </ul>
       </div>
     <div>
@@ -25,10 +26,7 @@
   <div class = "center">
 
     <% if current_user %>
-      Hello <%= current_user.email %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Sign In", new_user_session_path %> or
-      <%= link_to "Sign Up", new_user_registration_path %>
+      <p class="signout">You are logged in as <%= current_user.email %> <%= link_to "Sign Out", destroy_user_session_path, method: :delete %></p>
     <% end %>
 
   </div>

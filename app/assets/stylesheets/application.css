@@ -91,3 +91,49 @@ input {
 #new_step {
 	display: none;
 }
+
+.dashboard ul{
+  margin: 0 auto;
+  width: 100%;
+}
+
+.column li{
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 30%;
+}
+.column li img {
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.snap {
+
+}
+
+.results-one {
+
+}
+
+.results-two {
+
+}
+
+.signout{
+  font-family: "Roboto", "Helvetica", "Verdana", sans-serif;
+  float: right;
+  font-size: 14px;
+  margin: 12px auto;
+  text-align: center;
+  width: 100%;
+}
+
+.signout a{
+  background-color: #232323;
+  border: 1px solid black;
+  color: white;
+  font-size: 14px;
+  font-family: "Roboto", "Helvetica", "Verdana", sans-serif;
+  padding: 2px;
+}
