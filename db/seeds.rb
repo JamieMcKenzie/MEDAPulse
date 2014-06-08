@@ -33,7 +33,7 @@ end
 clients = []
 
 users.each do |user|
-  150.times do
+  15.times do
     clients << Client.create({name: CoolFaker::Character.name, phone: Faker::Number.number(10), salesforce_id: getID, user: user})
   end
 end
@@ -54,7 +54,7 @@ end
 
 steps.each do |step|
   2.times do
-    Message.create({content: CoolFaker::Team.name, date: getDate, sendAttempted: false, sendSuccessful: false, step:step, client: step.goal.client_id})
+    Message.create({content: CoolFaker::Team.name, date: getDate, send_attempted: false, send_successful: false, step:step, client_id: step.goal.client_id})
   end
 end
 

@@ -10,6 +10,7 @@ class StepsController < ApplicationController
   # GET /steps/1
   # GET /steps/1.json
   def show
+    @messages = @step.messages
   end
 
   # GET /steps/new
