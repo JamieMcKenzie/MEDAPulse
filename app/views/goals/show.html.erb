@@ -17,7 +17,7 @@
 
 <p>
   <strong>Client:</strong>
-  <%= @goal.client %>
+  <%= link_to "View Client", client_path(@goal.client_id) %>
 </p>
 
 <%= link_to 'Edit', edit_goal_path(@goal) %> |
@@ -29,4 +29,4 @@
   <% end %>
 </ol>
 
-<%= link_to 'New Step', new_step_path(@goal) %>
+<%= link_to "New Step", "/goals/#{@goal.id}/steps/new" %>

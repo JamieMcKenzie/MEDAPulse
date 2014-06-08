@@ -11,10 +11,12 @@ Rails.application.routes.draw do
 
   get '/clients/:client_id/goals/new', :to => 'goals#new'
   get '/goals/:goal_id/steps/new', :to => 'steps#new'
+  get '/steps/:step_id/messages/new', :to => 'messages#new'
 
   resources :clients
   resources :goals
   resources :steps
+  resources :messages
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

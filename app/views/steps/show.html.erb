@@ -17,8 +17,16 @@
 
 <p>
   <strong>Goal:</strong>
-  <%= @step.goal %>
+  <%= link_to "View Goal", goal_path(@step.goal_id) %>
 </p>
 
 <%= link_to 'Edit', edit_step_path(@step) %>
 <%= link_to 'Back', goal_path(@step.goal_id) %>
+
+<ol>
+  <% @messages.each do |message| %>
+      <li><%= render partial: 'shared/step_message_list_item', locals: {message: message} %></li>
+  <% end %>
+</ol>
+
+<%= link_to "New Message", "/steps/#{@step.id}/messages/new" %>

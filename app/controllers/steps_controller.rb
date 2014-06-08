@@ -10,12 +10,13 @@ class StepsController < ApplicationController
   # GET /steps/1
   # GET /steps/1.json
   def show
+    @messages = @step.messages
   end
 
   # GET /steps/new
   def new
     p params
-    @goal = Goal.find(params[:format])
+    @goal = Goal.find(params[:goal_id])
     @step = Step.new
   end
 
