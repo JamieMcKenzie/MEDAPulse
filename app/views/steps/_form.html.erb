@@ -22,9 +22,9 @@
     <%= f.label :by_when %><br>
     <%= f.date_select :by_when %>
   </div>
-  <div class="field">
+  <% if @goal %>
     <%= hidden_field_tag(:goal_id, @goal.id) %>
-  </div>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

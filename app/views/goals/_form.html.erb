@@ -23,9 +23,9 @@
     <%= f.label :num_value %><br>
     <%= f.number_field :num_value %>
   </div>
-  <div class="field">
+  <% if @client %>
     <%= hidden_field_tag :client_id, @client.id %>
-  </div>
+  <% end %>
 
   <div class="actions">
     <%= f.submit %>
