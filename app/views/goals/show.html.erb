@@ -4,6 +4,8 @@
 </h1>
 <p id="notice"><%= notice %></p>
 
+<h1>Goal Details</h1>
+
 <p>
   <strong>Goal Description:</strong>
   <%= @goal.content %>
@@ -17,6 +19,8 @@
   <strong>Client:</strong>
   <%= link_to "#{@goal.client.name}", client_path(@goal.client_id) %>
 </p>
+
+<h2>Steps</h2>
 
 <ol id="steps-list">
   <% @steps.each do |step| %>
