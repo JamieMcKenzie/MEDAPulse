@@ -20,9 +20,16 @@ def getDate
   Date.today+(10000*rand())
 end
 
+users = []
+10.times do
+  users << User.create({name: CoolFaker::Character.name, email: Faker::Internet.email, password: 'helloworld', password_confirmation: 'helloworld'})
+end
+
 clients = []
-150.times do
-  clients << Client.create({name: CoolFaker::Character.name, phone: Faker::Number.number(10), salesforce_id: getID})
+users.each do |user|
+  150.times do
+    clients << Client.create({name: CoolFaker::Character.name, phone: Faker::Number.number(10), salesforce_id: getID})
+  end
 end
 
 goals = []
