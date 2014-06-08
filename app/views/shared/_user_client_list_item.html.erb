@@ -1,3 +1,5 @@
 <div class = "user-client-list-item">
-  <%= link_to client.name, client_path(client) %>
+  <li class="name"><%= client.name %></li>
+  <li class="salesforce_id"><%= client.salesforce_id %></li>
+  <li><%= link_to "View Client", client_path(client) %></li>
 </div>

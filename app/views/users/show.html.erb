@@ -21,13 +21,9 @@
   <ul class="list">
     <% @clients.each do |client| %>
       <ul class="client-entry">
-        <li class="name"><%= client.name %></li>
-        <li class="salesforce_id"><%= client.salesforce_id %></li>
+        <%= render partial: 'shared/user_client_list_item', locals: {client: client} %>
       </ul>
     <% end %>
-  <%# @clients.each do |client| %>
-      <!-- <li><%# render partial: 'shared/user_client_list_item', locals: {client: client} %></li> -->
-  <%# end %>
   </ul>
 </div>
 <%= link_to 'New Client', "/users/#{@user.id}/clients/new" %>
