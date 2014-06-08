@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+<%= @goal.id %>
   <div class="field">
     <%= f.label :content %><br>
     <%= f.text_field :content %>
@@ -24,8 +24,7 @@
     <%= f.date_select :by_when %>
   </div>
   <div class="field">
-    <%= f.label :goal_id %><br>
-    <%= f.text_field :goal_id %>
+    <%= hidden_field_tag(:goal_id, @goal.id) %>
   </div>
   <div class="actions">
     <%= f.submit %>

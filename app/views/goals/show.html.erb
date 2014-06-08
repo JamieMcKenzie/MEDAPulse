@@ -28,3 +28,5 @@
     <li><%= render partial: 'shared/goal_step_list_item', locals: { step:step } %></li>
   <% end %>
 </ol>
+
+<%= link_to 'New Step', new_goal_steps_path(@goal) %>
