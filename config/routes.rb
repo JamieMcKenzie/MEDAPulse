@@ -2,11 +2,13 @@ Rails.application.routes.draw do
 
   get 'welcome/about'
   root :to => 'welcome#index'
+
+  resources :users
+
   devise_for :users, :controllers => { :registrations => "registrations" }
   resources :steps
 
   get '/clients/:client_id/goals/new', :to => 'goals#new'
-
 
   resources :goals
   resources :clients
