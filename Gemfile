@@ -42,6 +42,7 @@ group :development, :test do
   gem "cool_faker"
   gem "faker"
   gem "factory_girl_rails"
+  gem 'listjs-rails'
 end
 
 
