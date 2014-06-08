@@ -16,7 +16,7 @@
 </p>
 
 <%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', user_path(@user) %>
+<%= link_to 'Back', user_path(@client.user_id) %>
 
 <ol>
 <% @goals.each do |goal| %>

@@ -21,7 +21,7 @@
 </p>
 
 <%= link_to 'Edit', edit_goal_path(@goal) %> |
-<%= link_to 'Back', clients_path(@client) %>
+<%= link_to 'Back', client_path(@goal.client_id) %>
 
 <ol>
   <% @steps.each do |step| %>
