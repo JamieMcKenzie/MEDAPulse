@@ -14,6 +14,8 @@ class StepsController < ApplicationController
 
   # GET /steps/new
   def new
+    p params
+    @goal = Goal.find(params[:format])
     @step = Step.new
   end
 
@@ -25,7 +27,7 @@ class StepsController < ApplicationController
   # POST /steps.json
   def create
     @step = Step.new(step_params)
-
+    @step.goal_id = params[:goal_id]
     respond_to do |format|
       if @step.save
         format.html { redirect_to @step, notice: 'Step was successfully created.' }
