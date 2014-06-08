@@ -11,6 +11,7 @@ class GoalsController < ApplicationController
   # GET /goals/1.json
   def show
     @steps = @goal.steps
+    @step = Step.new
   end
 
   # GET /goals/new
