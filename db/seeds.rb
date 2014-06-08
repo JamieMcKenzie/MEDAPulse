@@ -45,11 +45,19 @@ clients.each do |client|
   end
 end
 
+steps = []
 goals.each do |goal|
   5.times do
-    Step.create({content: CoolFaker::Team.slogan, status: getStatus, by_when: getDate, goal: goal})
+    steps << Step.create({content: CoolFaker::Team.slogan, status: getStatus, by_when: getDate, goal: goal})
   end
 end
+
+steps.each do |step|
+  2.times do
+    Message.create({content: CoolFaker::Team.name, date: getDate, sendAttempted: false, sendSuccessful: false, step:step, client: step.goal.client_id})
+  end
+end
+
 
 
 
