@@ -17,3 +17,9 @@
 
 <%= link_to 'Edit', edit_client_path(@client) %> |
 <%= link_to 'Back', clients_path %>
+
+<ol>
+<% @goals.each do |goal| %>
+    <li><%= render partial: 'shared/client_goal_list_item', locals: {goal: goal} %></li>
+<% end %>
+</ol>
