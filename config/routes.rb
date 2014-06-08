@@ -6,15 +6,11 @@ Rails.application.routes.draw do
 
   root :to => 'welcome#index'
 
-  devise_for :users, :controllers => { :registrations => "registrations" }
+  resources :steps
 
-  resources :users do
-    resources :clients, shallow: true do
-      resources :goals, shallow: true do
-        resources :steps, shallow: true
-      end
-    end
-  end
+  resources :goals
+
+  resources :clients
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
