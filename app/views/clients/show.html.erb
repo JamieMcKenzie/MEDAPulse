@@ -23,3 +23,5 @@
     <li><%= render partial: 'shared/client_goal_list_item', locals: {goal: goal} %></li>
 <% end %>
 </ol>
+
+<%= link_to "New Goal", "/clients/#{@client.id}/goals/new" %>
