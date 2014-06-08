@@ -74,3 +74,7 @@ margin: 0 auto;
 .test {
 	vertical-align: middle;
 }
+
+#new_step {
+	display: none;
+}
