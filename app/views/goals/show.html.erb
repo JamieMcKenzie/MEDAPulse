@@ -22,3 +22,9 @@
 
 <%= link_to 'Edit', edit_goal_path(@goal) %> |
 <%= link_to 'Back', goals_path %>
+
+<ol>
+  <% @steps.each do |step| %>
+    <li><%= render partial: 'shared/goal_step_list_item', locals: { step:step } %></li>
+  <% end %>
+</ol>
