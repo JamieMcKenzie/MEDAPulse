@@ -1,29 +1,24 @@
+<div class="inside">
+  <h1>
+  Client Goals
+</h1>
 <p id="notice"><%= notice %></p>
 
 <h1>Goal Details</h1>
 
 <p>
-  <strong>Content:</strong>
+  <strong>Goal Description:</strong>
   <%= @goal.content %>
 </p>
 
 <p>
-  <strong>Category:</strong>
+  <strong>Goal Type:</strong>
   <%= @goal.category %>
 </p>
-
-<p>
-  <strong>Num value:</strong>
-  <%= @goal.num_value %>
-</p>
-
 <p>
   <strong>Client:</strong>
-  <%= link_to "View Client", client_path(@goal.client_id) %>
+  <%= link_to "#{@goal.client.name}", client_path(@goal.client_id) %>
 </p>
-
-<%= link_to 'Edit', edit_goal_path(@goal) %> |
-<%= link_to 'Back', client_path(@goal.client_id) %>
 
 <h2>Steps</h2>
 
@@ -33,9 +28,13 @@
   <% end %>
 </ol>
 
-
-<%= link_to "New Step", "/#",   :id => 'new-step-link' %> 
+<button class="pure-button pure-button-primary">
+<%= link_to "New Step", "/#",   :id => 'new-step-link' %></button>
 <%= render partial: 'steps/form', locals: {step: @step, goal: @goal} %>
+
+<br>
+<%= link_to 'Edit', edit_goal_path(@goal) %> |
+<%= link_to 'Back', client_path(@goal.client_id) %>
 
 <script type="text/javascript">
     $('#new_step').hide();
@@ -50,3 +49,5 @@
       $("#new_step")[0].reset();
     });
 </script>
+
+</div>

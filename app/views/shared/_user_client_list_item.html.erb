@@ -1,5 +1,3 @@
 <div class = "user-client-list-item">
-  <li class="name"><%= client.name %></li>
-  <li class="salesforce_id"><%= client.salesforce_id %></li>
-  <li><%= link_to "View Client", client_path(client) %></li>
+  <li class="name"><%= link_to "#{client.name} - ID: #{client.salesforce_id}", client_path(client), :class => "shading" %></li>
 </div>
