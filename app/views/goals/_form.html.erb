@@ -1,4 +1,4 @@
-<%= form_for(@goal) do |f| %>
+<%= form_for @goal, {:class => "pure-form"} do |f| %>
   <% if @goal.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@goal.errors.count, "error") %> prohibited this goal from being saved:</h2>
@@ -11,17 +11,13 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_field :content %>
-  </div>
-  <div class="field">
+ <div class="field">
     <%= f.label :category %><br>
     <%= f.text_field :category %>
   </div>
   <div class="field">
-    <%= f.label :num_value %><br>
-    <%= f.number_field :num_value %>
+    <%= f.label :content %><br>
+    <%= f.text_field :content %>
   </div>
   <% if @client %>
     <%= hidden_field_tag :client_id, @client.id %>

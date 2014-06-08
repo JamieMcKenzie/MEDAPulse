@@ -1,4 +1,7 @@
+<div class="inside">
 <p id="notice"><%= notice %></p>
+
+<button class="pure-button pure-button-primary"><%= link_to 'New Client', "/users/#{@user.id}/clients/new" %></button>
 
 <p>
   <strong>Email:</strong>
@@ -13,5 +16,4 @@
     <li><%= render partial: 'shared/user_client_list_item', locals: {client: client} %></li>
 <% end %>
 </ol>
-
-<%= link_to 'New Client', "/users/#{@user.id}/clients/new" %>
+</div>
