@@ -23,10 +23,12 @@
 <%= link_to 'Edit', edit_goal_path(@goal) %> |
 <%= link_to 'Back', client_path(@goal.client_id) %>
 
-<ol>
+<ol id="steps-list">
   <% @steps.each do |step| %>
     <li><%= render partial: 'shared/goal_step_list_item', locals: { step:step } %></li>
   <% end %>
 </ol>
 
-<%= link_to "New Step", "/goals/#{@goal.id}/steps/new" %>
+
+<%= link_to "New Step", "/#",   :id => 'new-step-link' %> 
+<%= render partial: 'steps/form', locals: {step: @step, goal: @goal}, :id => 'new-step-form'%>
