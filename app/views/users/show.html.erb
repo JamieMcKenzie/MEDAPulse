@@ -7,3 +7,11 @@
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+
+<ol>
+<% @clients.each do |client| %>
+    <li><%= render partial: 'shared/user_client_list_item', locals: {client: client} %></li>
+<% end %>
+</ol>
+
+<%= link_to 'New Client', "/users/#{@user.id}/clients/new" %>
