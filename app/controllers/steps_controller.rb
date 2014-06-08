@@ -15,7 +15,7 @@ class StepsController < ApplicationController
   # GET /steps/new
   def new
     p params
-    @goal = Goal.find(params[:format])
+    @goal = Goal.find(params[:goal_id])
     @step = Step.new
   end
 
