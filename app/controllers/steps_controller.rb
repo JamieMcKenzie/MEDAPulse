@@ -25,7 +25,6 @@ class StepsController < ApplicationController
   # POST /steps
   # POST /steps.json
   def create
-    p step_params
     @step = Step.new(step_params)
     @step.goal_id = params[:goal_id]
     respond_to do |format|
