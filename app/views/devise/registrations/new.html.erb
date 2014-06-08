@@ -1,6 +1,7 @@
+<div class = "inside">
 <h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html=> {class:"pure-form pure-form-stacked"}) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="control-group">
@@ -29,8 +30,8 @@
   </div>
   <div class="control-group">
     <div class="controls">
-      <%= f.submit "Sign up", class: 'btn' %>
+      <%= f.submit "Sign up", class: 'pure-button pure-button-primary' %>
     </div>
   </div>
 <% end %>
-
+</div>

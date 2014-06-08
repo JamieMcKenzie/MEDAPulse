@@ -1,27 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div class="inside">
+<h1> Client Details</h1>
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @client.name %>
-</p>
+	<p>
+	  <strong>Name:</strong>
+	  <%= @client.name %>
+	</p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @client.phone %>
-</p>
+	<p>
+	  <strong>Phone:</strong>
+	  <%= @client.phone %>
+	</p>
 
-<p>
-  <strong>Salesforce:</strong>
-  <%= @client.salesforce_id %>
-</p>
+	<p>
+	  <strong>Salesforce:</strong>
+	  <%= @client.salesforce_id %>
+	</p>
 
 <%= link_to 'Edit', edit_client_path(@client) %> |
 <%= link_to 'Back', user_path(@client.user) %>
 
-<ol>
-<% @goals.each do |goal| %>
-    <li><%= render partial: 'shared/client_goal_list_item', locals: {goal: goal} %></li>
-<% end %>
-</ol>
+	<ol>
+	<% @goals.each do |goal| %>
+	    <li><%= render partial: 'shared/client_goal_list_item', locals: {goal: goal} %></li>
+	<% end %>
+	</ol>
+	 <button class="pure-button pure-button-primary"><%= link_to "New Goal", "/clients/#{@client.id}/goals/new" %></button>
 
-<%= link_to "New Goal", "/clients/#{@client.id}/goals/new" %>
+</div>
