@@ -1,9 +1,9 @@
 class CreateSteps < ActiveRecord::Migration
   def change
     create_table :steps do |t|
-      t.string :content
-      t.string :status
-      t.date :by_when
+      t.string :content, null: false
+      t.string :status, null: false
+      t.date :by_when, null: false
       t.references :goal, index: true
 
       t.timestamps
