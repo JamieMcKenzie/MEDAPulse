@@ -31,6 +31,7 @@ gem 'spring',        group: :development
 
 gem 'dotenv-rails'
 gem 'twilio-ruby'
+gem 'listjs-rails'
 
 group :development do
   gem "awesome_print"
@@ -42,7 +43,6 @@ group :development, :test do
   gem "cool_faker"
   gem "faker"
   gem "factory_girl_rails"
-  gem 'listjs-rails'
 end
 
 
