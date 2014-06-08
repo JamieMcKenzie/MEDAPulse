@@ -10,13 +10,14 @@ class MessagesController < ApplicationController
   # GET /messages/1
   # GET /messages/1.json
   def show
+
   end
 
   # GET /messages/new
   def new
     p params
     @step = Step.find(params[:step_id])
-    @messages = Message.new
+    @message = Message.new
   end
 
   # GET /messages/1/edit
@@ -28,7 +29,8 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     @message.step_id = params[:step_id]
-    @message.client_id = params[:client_id]
+    @message.client_id = Step.find(params[:step_id]).goal.client.id
+    p @message.client_id
     respond_to do |format|
       if @message.save
         format.html { redirect_to @message, notice: 'Message was successfully created.' }
