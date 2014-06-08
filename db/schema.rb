@@ -11,23 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140608020158) do
+ActiveRecord::Schema.define(version: 20140608033952) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "clients", force: true do |t|
-    t.string   "name"
-    t.string   "phone"
-    t.string   "salesforce_id"
+    t.string   "name",          null: false
+    t.string   "phone",         null: false
+    t.string   "salesforce_id", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
   end
 
   create_table "goals", force: true do |t|
-    t.string   "content"
-    t.string   "category"
+    t.string   "content",    null: false
+    t.string   "category",   null: false
     t.integer  "num_value"
     t.integer  "client_id"
     t.datetime "created_at"
@@ -48,9 +48,9 @@ ActiveRecord::Schema.define(version: 20140608020158) do
   end
 
   create_table "steps", force: true do |t|
-    t.string   "content"
-    t.string   "status"
-    t.date     "by_when"
+    t.string   "content",    null: false
+    t.string   "status",     null: false
+    t.date     "by_when",    null: false
     t.integer  "goal_id"
     t.datetime "created_at"
     t.datetime "updated_at"
