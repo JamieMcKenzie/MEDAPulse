@@ -46,7 +46,9 @@ clients.each do |client|
 end
 
 goals.each do |goal|
-  Step.create({content: CoolFaker::Team.slogan, status: getStatus, by_when: getDate, goal: goal})
+  5.times do
+    Step.create({content: CoolFaker::Team.slogan, status: getStatus, by_when: getDate, goal: goal})
+  end
 end
 
 
