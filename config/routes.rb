@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'welcome/about'
   root :to => 'welcome#index'
 
+  get '/users/:user_id/clients/new', :to => 'clients#new'
+
   resources :users
 
   devise_for :users, :controllers => { :registrations => "registrations" }

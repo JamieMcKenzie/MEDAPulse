@@ -24,6 +24,7 @@
     <%= f.text_field :salesforce_id %>
   </div>
 
+  <%= hidden_field_tag :user_id, @user.id %>
 
   <div class="actions">
     <%= f.submit %>
