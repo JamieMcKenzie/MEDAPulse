@@ -1,6 +1,7 @@
+<div class="inside">
 <h2>Sign in</h2>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-horizontal'}) do |f| %>
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'pure-form pure-form-stacked'}) do |f| %>
   <%= devise_error_messages! %>
   <div class="control-group">
     <%= f.label :email, class: 'control-label' %>
@@ -16,7 +17,7 @@
   </div>
   <div class="control-group">
     <div class="controls">
-      <%= f.submit "Sign in", class: 'btn' %>
+      <%= f.submit "Sign in", class: 'pure-button pure-button-primary' %>
     </div>
   </div>
   <div class="control-group">
@@ -25,3 +26,4 @@
     </div>
   </div>
 <% end %>
+</div>

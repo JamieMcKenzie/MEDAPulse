@@ -25,11 +25,6 @@
     <% if current_user %>
 
       Hello <%= current_user.email %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-    <% else %>
-    <button class="pure-button pure-button-primary"><%= link_to "Sign Up Today", new_user_registration_path %></button>
-    <button class="pure-button">
-      <%= link_to "Sign In", new_user_session_path %>
-    </button>
     <% end %>
   </div>
 

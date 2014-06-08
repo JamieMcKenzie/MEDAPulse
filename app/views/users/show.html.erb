@@ -3,10 +3,9 @@
 
 <button class="pure-button pure-button-primary"><%= link_to 'New Client', "/users/#{@user.id}/clients/new" %></button>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+<h1>
+  Welcome, coach!
+</h1>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
