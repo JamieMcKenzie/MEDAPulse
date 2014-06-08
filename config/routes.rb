@@ -7,13 +7,9 @@ Rails.application.routes.draw do
 
   resources :users
 
-  devise_scope :user do
-    get "/sign_up" => "devise/registrations#new"
-  end
 
 
-  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
-
+  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout', :sign_up => 'devise/registrations#new'}
 
   get '/clients/:client_id/goals/new', :to => 'goals#new'
   get '/goals/:goal_id/steps/new', :to => 'steps#new'
