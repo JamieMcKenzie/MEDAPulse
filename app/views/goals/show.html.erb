@@ -17,7 +17,7 @@
 
 <p>
   <strong>Client:</strong>
-  <%= @goal.client %>
+  <%= link_to "View Client", client_path(@goal.client_id) %>
 </p>
 
 <%= link_to 'Edit', edit_goal_path(@goal) %> |

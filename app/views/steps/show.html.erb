@@ -17,7 +17,7 @@
 
 <p>
   <strong>Goal:</strong>
-  <%= @step.goal %>
+  <%= link_to "View Goal", goal_path(@step.goal_id) %>
 </p>
 
 <%= link_to 'Edit', edit_step_path(@step) %>

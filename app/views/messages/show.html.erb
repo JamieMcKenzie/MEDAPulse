@@ -22,12 +22,12 @@
 
 <p>
   <strong>Step:</strong>
-  <%= @message.step %>
+  <%= link_to "View Step", step_path(@message.step_id) %>
 </p>
 
 <p>
   <strong>Client:</strong>
-  <%= @message.client %>
+  <%= link_to "View Client", client_path(@message.client_id) %>
 </p>
 
 <%= link_to 'Edit', edit_message_path(@message) %>
