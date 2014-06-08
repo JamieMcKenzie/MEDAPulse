@@ -12,13 +12,15 @@ module Twilio
         from: FROM_NUM,
         body: message
       }
-      p message = client.account.messages.create(message_details)
+      message = client.account.messages.create(message_details)
+      true
     rescue Twilio::REST::RequestError => e
       self.handle_error(e.message)
+      false
     end
   end
 
   def handle_error(error_message)
-    p error_message # Determine where to send/display error message
+    error_message # Determine where to send/display error message
   end
 end
